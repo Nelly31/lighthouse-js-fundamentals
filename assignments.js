@@ -12,40 +12,53 @@
 
 // console.log(howManyHundreds(894));
 
-const calculateRectangleArea = function(length , width){
-  if (length < 0 || width < 0){
-    return undefined
-  }
-  return length * width 
-}
+// const calculateRectangleArea = function(length , width){
+//   if (length < 0 || width < 0){
+//     return undefined
+//   }
+//   return length * width 
+// }
 
-console.log(calculateRectangleArea(10,5));
+// console.log(calculateRectangleArea(10,5));
 
-console.log(calculateRectangleArea(1.5,2.5));
+// console.log(calculateRectangleArea(1.5,2.5));
 
-console.log(calculateRectangleArea(-1,5))
+// console.log(calculateRectangleArea(-1,5))
 
 
-const calculateTriangleArea = function(base,height){
-  if (base < 0 || height <0){
-    return undefined
-  }
-  return (base * height)/2
-}
+// const calculateTriangleArea = function(base,height){
+//   if (base < 0 || height <0){
+//     return undefined
+//   }
+//   return (base * height)/2
+// }
 
-console.log(calculateTriangleArea(10,5))
+// console.log(calculateTriangleArea(10,5))
 
-console.log(calculateTriangleArea(3,2.5))
+// console.log(calculateTriangleArea(3,2.5))
 
-console.log(calculateTriangleArea(-1,5))
+// console.log(calculateTriangleArea(-1,5))
 
-const calculateCircleArea = function(radius){
-  if (radius < 0) {
-    return undefined
-  }
-  return Math.PI * Math.pow(radius,2)
-}
+// const calculateCircleArea = function(radius){
+//   if (radius < 0) {
+//     return undefined
+//   }
+//   return Math.PI * Math.pow(radius,2)
+// }
 
-console.log(calculateCircleArea(10));
+// console.log(calculateCircleArea(10));
 
-console.log(calculateCircleArea(3.5))
+// console.log(calculateCircleArea(3.5))
+
+const iceCreamFlavours = ["chocolate", "vanilla", "cookies and cream", "rocky road", "strawberry"];
+
+iceCreamFlavours.push("root beer");
+
+console.log(iceCreamFlavours);
+
+console.log(iceCreamFlavours[0]);
+
+console.log(iceCreamFlavours[5]);
+
+console.log(iceCreamFlavours.length);
+
