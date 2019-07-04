@@ -1,0 +1,75 @@
+
+const makeCase = function(input,cas) {
+  let firstOutput = "";
+  let vowels = ["a","e","i","o","u"];
+  for (let i = 0; i < input.length; i++) {
+    if (cas === "camel") {
+      if (input[i] === " ") {
+        firstOutput += input[i + 1].toUpperCase();
+      } else if (input[i - 1] !== " ") {
+        firstOutput += input[i];
+      }
+    } else if (cas === "pascal") {
+      if (input[i] === " ") {
+        firstOutput += input[i + 1].toUpperCase();
+      } else if (i === 0) {
+        firstOutput += input[i].toUpperCase();
+      } else if (input[i - 1] !== " ") {
+        firstOutput += input[i];
+      }
+    } else if (cas === "snake") {
+      if (input[i] === " ") {
+        firstOutput += "_";
+      } else firstOutput += input[i];
+    } else if (cas === "kebab") {
+      if (input[i] === " ") {
+        firstOutput += "-";
+      } else {
+        firstOutput += input[i];
+      }
+    } else if (cas === "title") {
+      if (i === 0) {
+        firstOutput += input[i].toUpperCase();
+      } else if (input[i - 1] === " ") {
+        firstOutput += input[i].toUpperCase();
+      } else {
+        firstOutput += input[i];
+      }
+    } else if (cas === "vowel") {
+      let weFoundVowel = false;
+      for (let j = 0; j < vowels.length; j++) {
+        if (input[i] === vowels[j]) {
+          weFoundVowel = true;
+        }
+      }
+      if (weFoundVowel) {
+        firstOutput += input[i].toUpperCase();
+      } else {
+        firstOutput += input[i];
+      }
+    } else if (cas === "consonant") {
+      let weFoundVowel = false;
+      for (let k = 0; k < vowels.length; k++) {
+        if (input[i] === vowels[k]) {
+          weFoundVowel = true;
+        }
+      } if (weFoundVowel) {
+        firstOutput += input[i];
+      } else {
+        firstOutput += input[i].toUpperCase();
+      }
+    }
+  }
+  return firstOutput;
+};
+
+
+console.log(makeCase("this is a string", "camel"));
+console.log(makeCase("this is a string", "pascal"));
+console.log(makeCase("this is a string", "snake"));
+console.log(makeCase("this is a string", "kebab"));
+console.log(makeCase("this is a string", "title"));
+console.log(makeCase("this is a string", "vowel"));
+console.log(makeCase("this is a string", "consonant"));
+console.log(makeCase("this is a string", ["upper", "snake"]));
+
